@@ -10,7 +10,7 @@ export default class RegistrarUsuario implements CasoDeUso<Entrada, void> {
 
     constructor(private readonly repositorio: RepositorioUsuario) { }
 
-    async async executar(dados: Entrada): Promise<void> {
+    async executar(dados: Entrada): Promise<void> {
         const { nome, email, senha } = dados;
 
         const usuarioExiste = await this.repositorio.consultarPorEmail(email);
