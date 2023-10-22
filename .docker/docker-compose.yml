@@ -1,19 +1,16 @@
 version: '3' # Defina a versão do Docker Compose, por exemplo, '3' ou '3.5'
 
 services:
-  db:
+  database:
     image: postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: 123456
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-
-  adminer:
-    image: adminer
-    restart: always
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
     ports:
-      - "8080:8080"
-
+      - 5441:5432
+    volumes:
+      - pg-data:/var/lib/postgresql/data
 volumes:
-  pgdata:
+  pg-data:
