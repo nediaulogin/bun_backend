@@ -1,5 +1,5 @@
 import Elysia from "elysia";
-import RegistrarUsuario from "../core/usuario/service/RegistrarUsuario";
+import RegistrarUsuario from "../core/usuario/service/casos-de-uso/RegistrarUsuario";
 
 export default class RegistrarUsuarioController {
     constructor(

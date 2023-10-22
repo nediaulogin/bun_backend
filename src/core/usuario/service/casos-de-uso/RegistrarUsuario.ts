@@ -1,5 +1,5 @@
-import CasoDeUso from "../../shared/CasoDeUso";
-import RepositorioUsuario from "./RepositorioUsuario";
+import CasoDeUso from "../../../shared/CasoDeUso";
+import RepositorioUsuario from "../interfaces/RepositorioUsuario";
 
 type Entrada = {
     nome: string;
